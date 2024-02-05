@@ -1,4 +1,4 @@
-name: Leap Year CI/CD
+name: add
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  leap-year-check:
+  Addition:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,5 +18,5 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Run leap year check
-        run: python leap_year.py
+      - name: Run add check
+        run: python add.py
