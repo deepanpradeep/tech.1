@@ -9,7 +9,7 @@ job:
 
 step: 
   -name: setup python
-   with:
+   use:
       python_version 3.8
 
   -name: install dependencies
