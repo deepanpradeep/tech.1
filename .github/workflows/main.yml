@@ -1,23 +1,21 @@
-name: Leap Year
+name: leap year
 
 on:
-  push:
-    branches: main
+ push:
+  branch: -main
 
-jobs:
-  check-leap-year:
-    runs-on: ubuntu-latest
-    outputs:
-      steps: ${{ needs.run-tests.outputs.steps }}
+job:
+  run_on: ubuntu_latest
 
-    steps:
-      
-      - name: Set leap year variable
+step: 
+  -name: setup python
+     use: version 3.8
 
-      - name: Check if it's a leap year
-        id: check-leap-year
+  -name: install dependencies
+     run: pip install -r requirements.txt
 
-          else
-            echo "Not a leap year."
-            echo "::set-output name=is_leap_year::false"
-          fi
+  -name: run leap yearcheck
+     run:  python leap_year.py
+
+ 
+
