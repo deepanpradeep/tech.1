@@ -1,21 +1,19 @@
 name: leap year
 
 on:
- push:
-  branch: -main
+  push:
+    branches: -main
 
-job:
-  run_on: ubuntu_latest
+jobs:
+  run-on: ubuntu-latest
 
-step: 
-  -name: setup python
-   use:
-      python_version 3.8
+steps:
+  - name: setup python
+    with:
+      python-version: 3.8
 
-  -name: install dependencies
+  - name: install dependencies
+    # Add your installation steps here
 
-  -name: run leap yearcheck
-     run:  python leap_year.py
-
- 
-
+  - name: run leap year check
+    run: python leap_year.py
