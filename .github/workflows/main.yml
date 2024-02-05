@@ -1,0 +1,23 @@
+name: Leap Year
+
+on:
+  push:
+    branches: main
+
+jobs:
+  check-leap-year:
+    runs-on: ubuntu-latest
+    outputs:
+      steps: ${{ needs.run-tests.outputs.steps }}
+
+    steps:
+      
+      - name: Set leap year variable
+
+      - name: Check if it's a leap year
+        id: check-leap-year
+
+          else
+            echo "Not a leap year."
+            echo "::set-output name=is_leap_year::false"
+          fi
