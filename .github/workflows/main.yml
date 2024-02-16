@@ -1,4 +1,4 @@
-name: Productio
+name: Production
 
 on:
   push:
