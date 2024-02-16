@@ -1,4 +1,4 @@
-name: add
+name: Deployment
 
 on:
   push:
@@ -6,14 +6,22 @@ on:
       - main
 
 jobs:
-  Addition:
+  deploy_to_deepan:
     runs-on: ubuntu-latest
-
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      
+      - name: Deploy to deepan
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying to deepan branch"
+        
+
+ 
      
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
+
+
 
       
