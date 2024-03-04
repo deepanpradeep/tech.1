@@ -28,3 +28,5 @@ jobs:
         run: |
           docker build -t your-aws-account-id.dkr.ecr.your-aws-region.amazonaws.com/your-repository-name:latest .
           docker push your-aws-account-id.dkr.ecr.your-aws-region.amazonaws.com/your-repository-name:latest
+
+  
