@@ -1,6 +1,6 @@
 name: push to ECR
 
-on: 
+on:  
  
   push:
     branches: main
