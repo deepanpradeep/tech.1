@@ -28,8 +28,8 @@ jobs:
         run: docker build -t <image-name> .
 
       - name: Tag Docker image
-        run: docker tag <image-name>:latest <aws-account-id>.dkr.ecr.<global>.amazonaws.com/<web>:latest
+        run: docker tag <image-name>:latest <aws-account-id>.dkr.ecr.<ap-sotheast-2>.amazonaws.com/<web>:latest
 
       - name: Push Docker image to ECR
-        run: docker push <aws-account-id>.dkr.ecr.<global>.amazonaws.com/<web>:latest
+        run: docker push <aws-account-id>.dkr.ecr.<ap-southeast-2>.amazonaws.com/<web>:latest
 
